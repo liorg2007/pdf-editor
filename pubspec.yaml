@@ -1,0 +1,51 @@
+name: invoice_generator
+description: A Flutter app for generating Hebrew invoices as PDFs
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # PDF generation
+  pdf: ^3.10.7
+  
+  # Date formatting
+  intl: ^0.18.1
+  
+  # File handling
+  path_provider: ^2.1.1
+  
+  # Sharing PDFs
+  share_plus: ^7.2.1
+  
+  # Persistent storage
+  shared_preferences: ^2.2.1
+  
+  # Optional: For opening PDFs
+  open_file: ^3.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
+  
+  # Add your Hebrew font here
+  # Download from: https://fonts.google.com/noto/specimen/Noto+Sans+Hebrew
+  assets:
+    - assets/fonts/
+    
+  fonts:
+    - family: Hebrew
+      fonts:
+        - asset: assets/fonts/NotoSansHebrew-Regular.ttf
+        - asset: assets/fonts/NotoSansHebrew-Bold.ttf
+          weight: 700
